@@ -1,10 +1,9 @@
-class InputsController < ApplicationController
+class InputsController < OpenReadController
   before_action :set_input, only: [:show, :update, :destroy]
 
   # GET /inputs
   def index
-    @inputs = Input.all
-
+    @inputs = current_user.inputs.all
     render json: @inputs
   end
 
@@ -15,7 +14,8 @@ class InputsController < ApplicationController
 
   # POST /inputs
   def create
-    @input = Input.new(input_params)
+    # @input = Input.new(input_params)
+    @input = current_user.inputs.build(input_params)
 
     if @input.save
       render json: @input, status: :created, location: @input
@@ -41,11 +41,32 @@ class InputsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_input
-      @input = Input.find(params[:id])
+      # @input = Input.find(params[:id])
+      @input = current_user.inputs.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def input_params
-      params.require(:input).permit(:routineName, :antagSquatName, :squatWeight, :squatReps, :antagOhpName, :antagOhpWeight, :antagOhpReps, :ohpWeight, :ohpReps, :antagDeadliftName, :deadliftWeight, :deadliftReps, :antagBenchName, :antagBenchWeight, :antagBenchReps, :benchWeight, :benchReps, :antagSquat2Name, :squat2Name, :squat2Weight, :squat2Reps, :antagOhp2Name, :antagOhp2Weight, :antagOhp2Reps, :ohp2Name, :ohp2Weight, :ohp2Reps, :antagDeadlift2Name, :deadlift2Name, :deadlift2Weight, :deadlift2Reps, :antagBench2Name, :antagBench2Weight, :antagBench2Reps, :bench2Name, :bench2Weight, :bench2Reps, :antagSquat3Name, :squat3Name, :squat3Weight, :squat3Reps, :antagOhp3Name, :antagOhp3Weight, :antagOhp3Reps, :ohp3Name, :ohp3Weight, :ohp3Reps, :antagDeadlift3Name, :deadlift3Name, :deadlift3Weight, :deadlift3Reps, :antagBench3Name, :antagBench3Weight, :antagBench3Reps, :bench3Name, :bench3Weight, :bench3Reps, :core1, :core2, :core3, :core4, :core5, :core6, :oblique1, :oblique2, :oblique3, :oblique4, :oblique5, :oblique6)
+      params.require(:input).permit(:routineName, :antagSquatName, :squatWeight,
+        :integer, :squatReps, :integer, :antagOhpName, :antagOhpWeight,
+        :integer, :antagOhpReps, :integer, :ohpWeight, :integer, :ohpReps,
+        :integer, :antagDeadliftName, :deadliftWeight, :integer, :deadliftReps,
+        :integer, :antagBenchName, :antagBenchWeight, :integer, :antagBenchReps,
+        :integer, :benchWeight, :integer, :benchReps, :integer,
+        :antagSquat2Name, :squat2Name, :squat2Weight, :integer, :squat2Reps,
+        :integer, :antagOhp2Name, :antagOhp2Weight, :integer, :antagOhp2Reps,
+        :integer, :ohp2Name, :ohp2Weight, :integer, :ohp2Reps, :integer,
+        :antagDeadlift2Name, :deadlift2Name, :deadlift2Weight, :integer,
+        :deadlift2Reps, :integer, :antagBench2Name, :antagBench2Weight,
+        :integer, :antagBench2Reps, :integer, :bench2Name, :bench2Weight,
+        :integer, :bench2Reps, :integer, :antagSquat3Name, :squat3Name,
+        :squat3Weight, :integer, :squat3Reps, :integer, :antagOhp3Name,
+        :antagOhp3Weight, :integer, :antagOhp3Reps, :integer, :ohp3Name,
+        :ohp3Weight, :integer, :ohp3Reps, :integer, :antagDeadlift3Name,
+        :deadlift3Name, :deadlift3Weight, :integer, :deadlift3Reps, :integer,
+        :antagBench3Name, :antagBench3Weight, :integer, :antagBench3Reps,
+        :integer, :bench3Name, :bench3Weight, :integer, :bench3Reps, :integer,
+        :core1, :core2, :core3, :core4, :core5, :core6, :oblique1, :oblique2,
+        :oblique3, :oblique4, :oblique5, :oblique6, :user_id)
     end
 end
