@@ -1,7 +1,7 @@
 #!/bin/bash
 
-EMAIL=eric@mail.com
-PASSWORD=123
+EMAIL=test@mail.com
+PASSWORD=1
 
 curl "http://localhost:4741/sign-in" \
   --include \
