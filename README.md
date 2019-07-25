@@ -1,9 +1,10 @@
 # **Lunkedin**
 
-Lunkedin is a web application creates a weight-lifting routine based on the user's input.
+Lunkedin is a web application that creates a weight-lifting routine based on the user's input.
+
 The user inputs their squat, bench-press, and deadlift maximums, and get a
-12 week program, consisting of 4 days a week, 3 circuits per day, and 2 or 3 exercises per circuit.
-User can customize the routine by inputing their own exercises.
+12 week program, consisting of 4 days a week, 3 circuits per day, with 2 or 3 exercises per circuit.
+The user can customize the routine by inputing their own exercises.
 
 This routine is ideal for lifters who want to get stronger, build muscle mass, and burn fat. The intensity undulates daily and weekly, and progresses in a linear fashion, monthly.
 
