@@ -27,7 +27,7 @@ Styling
 - HTML
 - CSS
 - Sass
-- Material Ui
+- Material UI
 
 
 Links
@@ -51,6 +51,10 @@ User Stories
 * As a signed in user, I can see my 12-week routine, click a day, and see the exercise routine.
 * As a signed in user, I can edit my input for a routine.
 * As a signed in user, I can delete a routine I have created.
+
+Screenshot
+------
+https://i.imgur.com/IY9yqMM.png
 
 Wireframe
 ------
@@ -83,7 +87,7 @@ API Paths & Methods
 | PATCH  | `/inputs/:id`
 | DELETE | `/inputs/:id`
 
-Planning
+Planning and Process
 ------
 
 ### Day 1
@@ -113,6 +117,15 @@ Planning
 **GOAL:** Highlight remaining MVP requirements, assess stretch Goals
 * Styled front end with Material UI
 * Tested features
+
+Installation Instructions
+------
+
+1. Fork and clone this repository.
+2. Install dependencies with `npm install`.
+3. Install Material UI with `npm install @material-ui/core`
+4. Git add and git commit your initial changes.
+5. View changes live by running local server `npm start`.
 
 Problem-Solving Strategy
 ------
