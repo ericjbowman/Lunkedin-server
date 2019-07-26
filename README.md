@@ -54,7 +54,7 @@ User Stories
 
 Screenshot
 ------
-https://i.imgur.com/IY9yqMM.png
+![screenshot]https://i.imgur.com/IY9yqMM.png
 
 Wireframe
 ------
