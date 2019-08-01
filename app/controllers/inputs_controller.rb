@@ -67,6 +67,6 @@ class InputsController < OpenReadController
         :antagBench3Name, :antagBench3Weight, :integer, :antagBench3Reps,
         :integer, :bench3Name, :bench3Weight, :integer, :bench3Reps, :integer,
         :core1, :core2, :core3, :core4, :core5, :core6, :oblique1, :oblique2,
-        :oblique3, :oblique4, :oblique5, :oblique6, :user_id)
+        :oblique3, :oblique4, :oblique5, :oblique6, :created, :user_id)
     end
 end
